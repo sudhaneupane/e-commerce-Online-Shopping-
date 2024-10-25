@@ -6,16 +6,18 @@ import menu_icon from "./menu-icon.webp";
 import back_icon from "./back-icon.webp";
 import hero_pic from "./hero-pic.jpg";
 import round_neck from "./round-neck.webp";
-import men_slim_jean from './slim-jean.webp'
-import women_floral_skirt from './women-floral-skirt.webp'
-import cartoon_tshirt from "./cartoon_tshirt.webp"
-import polo_tshirt from './polo_tshirt.webp'
-import denim_shorts from './denim_shorts.webp'
-import maxi_dress from './maxi_dress.webp'
-import leatherjacket from './leatherjacket.webp'
-import high_waist_jean from './high_waist_jean.webp'
-import casual_tshirt from './casual_tshirt.webp'
-
+import men_slim_jean from "./slim-jean.webp";
+import women_floral_skirt from "./women-floral-skirt.webp";
+import cartoon_tshirt from "./cartoon_tshirt.webp";
+import polo_tshirt from "./polo_tshirt.webp";
+import denim_shorts from "./denim_shorts.webp";
+import maxi_dress from "./maxi_dress.webp";
+import leatherjacket from "./leatherjacket.webp";
+import high_waist_jean from "./high_waist_jean.webp";
+import casual_tshirt from "./casual_tshirt.webp";
+import exchange_icon from "./exchange.png";
+import return_policy_icon from "./distribution.png";
+import customer_support from "./help-call.png";
 
 export const assets = {
   forever,
@@ -25,6 +27,9 @@ export const assets = {
   menu_icon,
   back_icon,
   hero_pic,
+  exchange_icon,
+  return_policy_icon,
+  customer_support,
 };
 
 export const products = [
