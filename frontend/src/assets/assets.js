@@ -1,7 +1,7 @@
 import forever from "./forever.png";
-import search_icon from "./search-icon.webp";
-import profile_icon from "./profile-icon.webp";
-import cart_icon from "./cart-icon.webp";
+import search_icon from "./magnifying-glass.png";
+import profile_icon from "./user.png";
+import cart_icon from "./shopping-bag.png";
 import menu_icon from "./menu-icon.webp";
 import back_icon from "./back-icon.webp";
 import hero_pic from "./hero-pic.jpg";
@@ -11,13 +11,18 @@ import women_floral_skirt from "./women-floral-skirt.webp";
 import cartoon_tshirt from "./cartoon_tshirt.webp";
 import polo_tshirt from "./polo_tshirt.webp";
 import denim_shorts from "./denim_shorts.webp";
+import sweatshirt from "./kids_sweatshirt.webp";
+import women_blazer from "./blazer.webp";
 import maxi_dress from "./maxi_dress.webp";
 import leatherjacket from "./leatherjacket.webp";
+import men_pant from "./men_pant.webp";
+import sport_legging from "./sport_legging.webp";
 import high_waist_jean from "./high_waist_jean.webp";
 import casual_tshirt from "./casual_tshirt.webp";
 import exchange_icon from "./exchange.png";
 import return_policy_icon from "./distribution.png";
 import customer_support from "./help-call.png";
+import dropdown_icon from "./arrow-down.png";
 
 export const assets = {
   forever,
@@ -30,13 +35,14 @@ export const assets = {
   exchange_icon,
   return_policy_icon,
   customer_support,
+  dropdown_icon,
 };
 
 export const products = [
   {
     _id: "01",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-05-01",
     name: "Women Round Neck T-shirt",
     price: "1200",
@@ -47,7 +53,7 @@ export const products = [
   {
     _id: "02",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-06-12",
     name: "Men Slim Fit Jeans",
     price: "1800",
@@ -58,7 +64,7 @@ export const products = [
   {
     _id: "03",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-04-18",
     name: "Women Floral Skirt",
     price: "1500",
@@ -69,7 +75,7 @@ export const products = [
   {
     _id: "04",
     bestseller: false,
-    category: "kids",
+    category: "Kids",
     date: "2024-03-20",
     name: "Kids Cartoon T-shirt",
     price: "700",
@@ -80,7 +86,7 @@ export const products = [
   {
     _id: "05",
     bestseller: true,
-    category: "men",
+    category: "Men",
     date: "2024-07-15",
     name: "Men Classic Polo Shirt",
     price: "1400",
@@ -91,7 +97,7 @@ export const products = [
   {
     _id: "06",
     bestseller: false,
-    category: "women",
+    category: "Women",
     date: "2024-08-02",
     name: "Women Maxi Dress",
     image: maxi_dress,
@@ -102,7 +108,7 @@ export const products = [
   {
     _id: "07",
     bestseller: true,
-    category: "kids",
+    category: "Kids",
     date: "2024-09-05",
     name: "Kids Denim Shorts",
     price: "800",
@@ -113,7 +119,7 @@ export const products = [
   {
     _id: "08",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-02-11",
     name: "Men Leather Jacket",
     price: "3500",
@@ -124,7 +130,7 @@ export const products = [
   {
     _id: "09",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-10-15",
     name: "Women High Waist Jeans",
     price: "1700",
@@ -135,7 +141,7 @@ export const products = [
   {
     _id: "10",
     bestseller: true,
-    category: "men",
+    category: "Men",
     date: "2024-09-25",
     name: "Men Striped Casual T-shirt",
     price: "1300",
@@ -146,39 +152,43 @@ export const products = [
   {
     _id: "11",
     bestseller: false,
-    category: "women",
+    category: "Women",
     date: "2024-01-29",
     name: "Women Blazer",
     price: "2500",
+    image:women_blazer,
     sizes: ["S", "M", "L"],
     subcategory: "Outerwear",
   },
   {
     _id: "12",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-07-10",
     name: "Men Chino Pants",
     price: "1600",
+    image:men_pant,
     sizes: ["M", "L", "XL", "XXL"],
     subcategory: "BottomWear",
   },
   {
     _id: "13",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-03-22",
     name: "Women Sports Leggings",
     price: "900",
+    image:sport_legging,
     sizes: ["S", "M", "L"],
     subcategory: "ActiveWear",
   },
   {
     _id: "14",
     bestseller: true,
-    category: "kids",
+    category: "Kids",
     date: "2024-04-09",
-    name: "Kids Hoodie",
+    name: "Kids Sweatshirt",
+    image:sweatshirt,
     price: "1100",
     sizes: ["S", "M", "L"],
     subcategory: "Outerwear",
@@ -186,7 +196,7 @@ export const products = [
   {
     _id: "15",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-08-14",
     name: "Men Graphic T-shirt",
     price: "900",
@@ -196,7 +206,7 @@ export const products = [
   {
     _id: "16",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-06-18",
     name: "Women Crop Top",
     price: "800",
@@ -206,7 +216,7 @@ export const products = [
   {
     _id: "17",
     bestseller: true,
-    category: "kids",
+    category: "Kids",
     date: "2024-07-02",
     name: "Kids Joggers",
     price: "950",
@@ -216,7 +226,7 @@ export const products = [
   {
     _id: "18",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-11-05",
     name: "Men Formal Trousers",
     price: "2000",
@@ -226,7 +236,7 @@ export const products = [
   {
     _id: "19",
     bestseller: true,
-    category: "women",
+    category: "Women",
     date: "2024-05-28",
     name: "Women Ankle Boots",
     price: "3000",
@@ -236,7 +246,7 @@ export const products = [
   {
     _id: "20",
     bestseller: false,
-    category: "men",
+    category: "Men",
     date: "2024-04-14",
     name: "Men Hooded Sweatshirt",
     price: "1500",
