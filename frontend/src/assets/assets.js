@@ -48,7 +48,7 @@ export const products = [
     price: "1200",
     image: round_neck,
     sizes: ["M", "S", "L", "XL"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "02",
@@ -59,7 +59,7 @@ export const products = [
     price: "1800",
     image: men_slim_jean,
     sizes: ["M", "L", "XL"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "03",
@@ -70,7 +70,7 @@ export const products = [
     price: "1500",
     image: women_floral_skirt,
     sizes: ["S", "M", "L"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "04",
@@ -81,7 +81,7 @@ export const products = [
     price: "700",
     image: cartoon_tshirt,
     sizes: ["S", "M"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "05",
@@ -92,7 +92,7 @@ export const products = [
     price: "1400",
     image: polo_tshirt,
     sizes: ["L", "XL", "XXL"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "06",
@@ -103,7 +103,7 @@ export const products = [
     image: maxi_dress,
     price: "2000",
     sizes: ["M", "S", "L"],
-    subcategory: "Dresses",
+    subCategory: "Dresses",
   },
   {
     _id: "07",
@@ -114,7 +114,7 @@ export const products = [
     price: "800",
     image: denim_shorts,
     sizes: ["S", "M", "L"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "08",
@@ -125,7 +125,7 @@ export const products = [
     price: "3500",
     image: leatherjacket,
     sizes: ["M", "L", "XL"],
-    subcategory: "Outerwear",
+    subCategory: "Outerwear",
   },
   {
     _id: "09",
@@ -136,7 +136,7 @@ export const products = [
     price: "1700",
     image: high_waist_jean,
     sizes: ["S", "M", "L", "XL"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "10",
@@ -147,7 +147,7 @@ export const products = [
     price: "1300",
     image: casual_tshirt,
     sizes: ["M", "L", "XL"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "11",
@@ -158,7 +158,7 @@ export const products = [
     price: "2500",
     image:women_blazer,
     sizes: ["S", "M", "L"],
-    subcategory: "Outerwear",
+    subCategory: "Outerwear",
   },
   {
     _id: "12",
@@ -169,7 +169,7 @@ export const products = [
     price: "1600",
     image:men_pant,
     sizes: ["M", "L", "XL", "XXL"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "13",
@@ -180,7 +180,7 @@ export const products = [
     price: "900",
     image:sport_legging,
     sizes: ["S", "M", "L"],
-    subcategory: "ActiveWear",
+    subCategory: "ActiveWear",
   },
   {
     _id: "14",
@@ -191,7 +191,7 @@ export const products = [
     image:sweatshirt,
     price: "1100",
     sizes: ["S", "M", "L"],
-    subcategory: "Outerwear",
+    subCategory: "Outerwear",
   },
   {
     _id: "15",
@@ -201,7 +201,7 @@ export const products = [
     name: "Men Graphic T-shirt",
     price: "900",
     sizes: ["M", "L", "XL"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "16",
@@ -211,7 +211,7 @@ export const products = [
     name: "Women Crop Top",
     price: "800",
     sizes: ["S", "M", "L"],
-    subcategory: "TopWear",
+    subCategory: "TopWear",
   },
   {
     _id: "17",
@@ -221,7 +221,7 @@ export const products = [
     name: "Kids Joggers",
     price: "950",
     sizes: ["S", "M"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "18",
@@ -231,7 +231,7 @@ export const products = [
     name: "Men Formal Trousers",
     price: "2000",
     sizes: ["M", "L", "XL", "XXL"],
-    subcategory: "BottomWear",
+    subCategory: "BottomWear",
   },
   {
     _id: "19",
@@ -241,7 +241,7 @@ export const products = [
     name: "Women Ankle Boots",
     price: "3000",
     sizes: ["36", "37", "38", "39"],
-    subcategory: "Footwear",
+    subCategory: "Footwear",
   },
   {
     _id: "20",
@@ -251,6 +251,6 @@ export const products = [
     name: "Men Hooded Sweatshirt",
     price: "1500",
     sizes: ["M", "L", "XL"],
-    subcategory: "Outerwear",
+    subCategory: "Outerwear",
   },
 ];

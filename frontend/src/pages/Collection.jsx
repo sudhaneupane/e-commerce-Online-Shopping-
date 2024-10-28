@@ -26,14 +26,21 @@ const Collection = () => {
 
   const applyFilter = () => {
     let productsCopy = products.slice();
+
     if (category.length > 0) {
       productsCopy = productsCopy.filter((item) =>
         category.includes(item.category)
       );
     }
+
+    if (subCategory.length > 0) {
+      productsCopy = productsCopy.filter((item) =>
+        subCategory.includes(item.subCategory)
+      );
+    }
     setFilterProducts(productsCopy);
   };
-  
+
   useEffect(() => {
     setFilterProducts(products);
   }, [products]);
@@ -108,37 +115,46 @@ const Collection = () => {
                 <input
                   className="w-3"
                   type="checkbox"
-                  value="Topwear"
-                  onClick={toggleSubCategory}
+                  value="TopWear"
+                  onChange={toggleSubCategory}
                 />
-                Topwear
+                TopWear
               </p>
               <p className="flex gap-2">
                 <input
                   className="w-3"
                   type="checkbox"
-                  value="Bottomwear"
-                  onClick={toggleSubCategory}
+                  value="BottomWear"
+                  onChange={toggleSubCategory}
                 />
-                Bottomwear
+                BottomWear
               </p>
               <p className="flex gap-2">
                 <input
                   className="w-3"
                   type="checkbox"
-                  value="Winterwear"
-                  onClick={toggleSubCategory}
+                  value="WinterWear"
+                  onChange={toggleSubCategory}
                 />
-                Winterwear
+                WinterWear
               </p>
               <p className="flex gap-2">
                 <input
                   className="w-3"
                   type="checkbox"
-                  value="Summerwear"
-                  onClick={toggleSubCategory}
+                  value="SummerWear"
+                  onChange={toggleSubCategory}
                 />
-                Summerwear
+                SummerWear
+              </p>
+              <p className="flex gap-2">
+                <input
+                  className="w-3"
+                  type="checkbox"
+                  value="Dresses"
+                  onChange={toggleSubCategory}
+                />
+                Dresses
               </p>
             </div>
           </div>
