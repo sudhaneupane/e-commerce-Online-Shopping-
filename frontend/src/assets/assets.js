@@ -29,6 +29,8 @@ import exchange_icon from "./exchange.png";
 import return_policy_icon from "./distribution.png";
 import customer_support from "./help-call.png";
 import dropdown_icon from "./arrow-down.png";
+import close_icon from "./close.png";
+
 
 export const assets = {
   forever,
@@ -42,6 +44,7 @@ export const assets = {
   return_policy_icon,
   customer_support,
   dropdown_icon,
+  close_icon
 };
 
 export const products = [
