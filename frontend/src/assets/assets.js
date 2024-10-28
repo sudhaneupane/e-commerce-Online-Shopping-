@@ -12,6 +12,12 @@ import cartoon_tshirt from "./cartoon_tshirt.webp";
 import polo_tshirt from "./polo_tshirt.webp";
 import denim_shorts from "./denim_shorts.webp";
 import sweatshirt from "./kids_sweatshirt.webp";
+import graphic_tshirt from "./graphic_tshirt.webp";
+import crop_top from "./crop_top.webp";
+import formal_trouser from "./formal_trouser.webp";
+import kids_joggers from "./kids_joggers.webp";
+import ankle_boots from "./ankle_boots.webp";
+import hooded_sweatshirt from "./sweatshirt.webp";
 import women_blazer from "./blazer.webp";
 import maxi_dress from "./maxi_dress.webp";
 import leatherjacket from "./leatherjacket.webp";
@@ -200,6 +206,7 @@ export const products = [
     date: "2024-08-14",
     name: "Men Graphic T-shirt",
     price: "900",
+    image:graphic_tshirt,
     sizes: ["M", "L", "XL"],
     subCategory: "TopWear",
   },
@@ -210,6 +217,7 @@ export const products = [
     date: "2024-06-18",
     name: "Women Crop Top",
     price: "800",
+    image:crop_top,
     sizes: ["S", "M", "L"],
     subCategory: "TopWear",
   },
@@ -220,6 +228,7 @@ export const products = [
     date: "2024-07-02",
     name: "Kids Joggers",
     price: "950",
+    image:kids_joggers,
     sizes: ["S", "M"],
     subCategory: "BottomWear",
   },
@@ -230,6 +239,7 @@ export const products = [
     date: "2024-11-05",
     name: "Men Formal Trousers",
     price: "2000",
+    image:formal_trouser,
     sizes: ["M", "L", "XL", "XXL"],
     subCategory: "BottomWear",
   },
@@ -240,6 +250,7 @@ export const products = [
     date: "2024-05-28",
     name: "Women Ankle Boots",
     price: "3000",
+    image:ankle_boots,
     sizes: ["36", "37", "38", "39"],
     subCategory: "Footwear",
   },
@@ -250,6 +261,7 @@ export const products = [
     date: "2024-04-14",
     name: "Men Hooded Sweatshirt",
     price: "1500",
+    image:hooded_sweatshirt,
     sizes: ["M", "L", "XL"],
     subCategory: "Outerwear",
   },
