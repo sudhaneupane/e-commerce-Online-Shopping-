@@ -10,13 +10,14 @@ const SearchBar = () => {
   const [visible, setVisible] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    if (location.pathname.includes("collection") && showSearch) {
-    }
+    if (location.pathname.includes("collection")) {
+      setVisible(true);
+    } else setVisible(false);
   }, [location]);
 
-  return showSearch ? (
-    <div className=" border-t border-b bg-gray-50 text-center">
-      <div className="inline-flex items-center justify-center border-gray-400 px-5 py-1 my-3 mx-3 rounded-full w-3/4 sm:w-1/2">
+  return showSearch && visible ? (
+    <div className=" border-b border-t bg-gray-50 text-center rounded-full  border-gray-400">
+      <div className="inline-flex items-center justify-center border-gray-400 px-5 py-1 my-3 mx-3  w-3/4 sm:w-1/2">
         <input
           value={search}
           onChange={(e) => {

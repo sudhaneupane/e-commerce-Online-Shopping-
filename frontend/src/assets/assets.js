@@ -30,7 +30,8 @@ import return_policy_icon from "./distribution.png";
 import customer_support from "./help-call.png";
 import dropdown_icon from "./arrow-down.png";
 import close_icon from "./close.png";
-
+import star_icon from "./star.png";
+import dull_star_icon from "./star1.png";
 
 export const assets = {
   forever,
@@ -44,7 +45,9 @@ export const assets = {
   return_policy_icon,
   customer_support,
   dropdown_icon,
-  close_icon
+  close_icon,
+  star_icon,
+  dull_star_icon,
 };
 
 export const products = [
@@ -69,6 +72,7 @@ export const products = [
     image: men_slim_jean,
     sizes: ["M", "L", "XL"],
     subCategory: "BottomWear",
+    description:"knjsdfhbgtidfknjc"
   },
   {
     _id: "03",
@@ -165,7 +169,7 @@ export const products = [
     date: "2024-01-29",
     name: "Women Blazer",
     price: "2500",
-    image:women_blazer,
+    image: women_blazer,
     sizes: ["S", "M", "L"],
     subCategory: "Outerwear",
   },
@@ -176,7 +180,7 @@ export const products = [
     date: "2024-07-10",
     name: "Men Chino Pants",
     price: "1600",
-    image:men_pant,
+    image: men_pant,
     sizes: ["M", "L", "XL", "XXL"],
     subCategory: "BottomWear",
   },
@@ -187,7 +191,7 @@ export const products = [
     date: "2024-03-22",
     name: "Women Sports Leggings",
     price: "900",
-    image:sport_legging,
+    image: sport_legging,
     sizes: ["S", "M", "L"],
     subCategory: "ActiveWear",
   },
@@ -197,7 +201,7 @@ export const products = [
     category: "Kids",
     date: "2024-04-09",
     name: "Kids Sweatshirt",
-    image:sweatshirt,
+    image: sweatshirt,
     price: "1100",
     sizes: ["S", "M", "L"],
     subCategory: "Outerwear",
@@ -209,7 +213,7 @@ export const products = [
     date: "2024-08-14",
     name: "Men Graphic T-shirt",
     price: "900",
-    image:graphic_tshirt,
+    image: graphic_tshirt,
     sizes: ["M", "L", "XL"],
     subCategory: "TopWear",
   },
@@ -220,7 +224,7 @@ export const products = [
     date: "2024-06-18",
     name: "Women Crop Top",
     price: "800",
-    image:crop_top,
+    image: crop_top,
     sizes: ["S", "M", "L"],
     subCategory: "TopWear",
   },
@@ -231,7 +235,7 @@ export const products = [
     date: "2024-07-02",
     name: "Kids Joggers",
     price: "950",
-    image:kids_joggers,
+    image: kids_joggers,
     sizes: ["S", "M"],
     subCategory: "BottomWear",
   },
@@ -242,7 +246,7 @@ export const products = [
     date: "2024-11-05",
     name: "Men Formal Trousers",
     price: "2000",
-    image:formal_trouser,
+    image: formal_trouser,
     sizes: ["M", "L", "XL", "XXL"],
     subCategory: "BottomWear",
   },
@@ -253,7 +257,7 @@ export const products = [
     date: "2024-05-28",
     name: "Women Ankle Boots",
     price: "3000",
-    image:ankle_boots,
+    image: ankle_boots,
     sizes: ["36", "37", "38", "39"],
     subCategory: "Footwear",
   },
@@ -264,7 +268,7 @@ export const products = [
     date: "2024-04-14",
     name: "Men Hooded Sweatshirt",
     price: "1500",
-    image:hooded_sweatshirt,
+    image: hooded_sweatshirt,
     sizes: ["M", "L", "XL"],
     subCategory: "Outerwear",
   },

@@ -5,7 +5,7 @@ import ProductItem from "../components/ProductItem";
 import { assets } from "../assets/assets";
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products,search,showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
 
@@ -28,6 +28,10 @@ const Collection = () => {
 
   const applyFilter = () => {
     let productsCopy = products.slice();
+
+    if(showSearch && search){
+      productsCopy=productsCopy.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()))
+    }
 
     if (category.length > 0) {
       productsCopy = productsCopy.filter((item) =>
@@ -60,14 +64,14 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory]);
+  }, [category, subCategory,search,showSearch]);
 
   useEffect(() => {
     sortProduct();
   }, [sortType]);
 
   return (
-    <div className="flex flex-col items-center pt-10 border-t">
+    <div className="flex flex-col items-center pt-10">
       <div className="flex flex-col sm:flex-row gap-10 w-full max-w-screen-xl">
         {/* filter options */}
         <div className="min-w-60">
