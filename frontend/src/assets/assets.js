@@ -49,7 +49,7 @@ export const assets = {
   close_icon,
   star_icon,
   dull_star_icon,
-  bin_icon
+  bin_icon,
 };
 
 export const products = [
@@ -74,7 +74,7 @@ export const products = [
     image: men_slim_jean,
     sizes: ["M", "L", "XL"],
     subCategory: "BottomWear",
-    description:"knjsdfhbgtidfknjc"
+    description: "knjsdfhbgtidfknjc",
   },
   {
     _id: "03",
