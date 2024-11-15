@@ -34,6 +34,7 @@ import star_icon from "./star.png";
 import dull_star_icon from "./star1.png";
 import bin_icon from "./recycle-bin.png";
 import about_us from "./about.jpg";
+import contact_us from "./contact.jpg";
 
 export const assets = {
   forever,
@@ -51,7 +52,8 @@ export const assets = {
   star_icon,
   dull_star_icon,
   bin_icon,
-  about_us
+  about_us,
+  contact_us
 };
 
 export const products = [
