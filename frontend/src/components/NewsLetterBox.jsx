@@ -16,7 +16,7 @@ const NewsLetterBox = () => {
       </p>
       <form
         onSubmit={onSubmitHandler}
-        className="w-full sm:1/2 flex items-cent  gap-3 mx-auto my-6 border pl-3"
+        className="w-full sm:1/2 flex items-center  gap-3 mx-auto my-6 border pl-3"
       >
         <input
           className="w-full sm:flex-1 outline-none"
