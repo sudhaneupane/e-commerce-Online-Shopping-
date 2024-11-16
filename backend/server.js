@@ -18,4 +18,8 @@ app.get("/", (req, res) => {
   res.send("OK");
 });
 
+import userRouter from "./routers/userRoute.js";
+
+app.use("/api/user", userRouter);
+
 app.listen(port, () => console.log(`Server started on ${port}`));
