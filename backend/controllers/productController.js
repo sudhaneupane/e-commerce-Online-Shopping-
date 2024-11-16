@@ -53,6 +53,7 @@ const addProduct = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
+
 const listProducts = async (req, res) => {
   try {
     const products = await productModel.find({});
@@ -62,6 +63,32 @@ const listProducts = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
-const removeProduct = async () => {};
-const singleProduct = async () => {};
+
+const removeProduct = async (req, res) => {
+  try {
+    const product = await productModel.findByIdAndDelete(req.params.id);
+    if (!product) {
+      return res.json({ success: false, message: "Product cannot be deleted" });
+    }
+    res.json({ success: true, message: "Product removed" });
+  } catch (error) {
+    console.log("error:", error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+const singleProduct = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const product = await productModel.findById(id);
+    if (!product) {
+      return res.json({ success: false, message: "The id doesn't exist" });
+    }
+    res.json({ success: true, product });
+  } catch (error) {
+    console.log("error:", error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
 export { addProduct, listProducts, removeProduct, singleProduct };
