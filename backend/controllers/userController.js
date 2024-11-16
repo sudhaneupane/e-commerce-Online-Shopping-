@@ -7,7 +7,27 @@ const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET);
 };
 
-const loginUser = async (req, res) => {};
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      return res.json({ success: false, message: "User doesn't exist" });
+    }
+
+    const ifMatched = await bcrypt.compare(password, user.password);
+    if (!ifMatched) {
+      return res.json({ success: false, message: "Invalid credentials" });
+    } else {
+      const token = createToken(user._id);
+      res.json({ success: true, token });
+    }
+  } catch (error) {
+    console.log("error:", error);
+    res.json({ success: false, message: error.message });
+  }
+};
 
 const registerUser = async (req, res) => {
   try {
