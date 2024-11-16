@@ -19,7 +19,9 @@ app.get("/", (req, res) => {
 });
 
 import userRouter from "./routers/userRoute.js";
+import productRouter from "./routers/productRoute.js";
 
 app.use("/api/user", userRouter);
+app.use("/api/products", productRouter);
 
 app.listen(port, () => console.log(`Server started on ${port}`));
