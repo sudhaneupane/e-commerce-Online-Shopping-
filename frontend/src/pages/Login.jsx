@@ -22,10 +22,9 @@ const Login = () => {
           email,
           password,
         });
-        if (response.data.success) {
-          setToken(response.data.token);
-          localStorage.setItem("token", response.data.token);
-          toast;
+
+        if (response.status === 200) {
+          toast.success("Registered ");
         } else {
           toast.error(response.data.message);
         }
