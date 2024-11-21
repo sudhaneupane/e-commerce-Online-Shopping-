@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import axios from "axios";
+import { backendUrl } from "../App";
+import { toast } from "react-toastify";
+
+const token = localStorage.getItem("token");
 
 const Add = () => {
   const [image1, setImage1] = useState(false);
@@ -11,30 +15,52 @@ const Add = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [subCategoty, setSubCategory] = useState("");
+  const [category, setCategory] = useState("Men");
+  const [subCategory, setSubCategory] = useState("Topwear");
   const [bestSeller, setBestSeller] = useState(false);
   const [sizes, setSizes] = useState([]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("description", description);
-    formData.append("price", price);
-    formData.append("category", category);
-    formData.append("subCategoty", subCategoty);
-    formData.append("bestSeller", bestSeller);
-    formData.append("sizes", JSON.stringify(sizes));
-
-    if (image1) formData.append("image1", image1);
-    if (image2) formData.append("image2", image2);
-    if (image3) formData.append("image3", image3);
-    if (image4) formData.append("image4", image4);
     try {
-      const response = await axios.post(``, formData);
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("description", description);
+      formData.append("price", price);
+      formData.append("category", category);
+      formData.append("subCategory", subCategory);
+      formData.append("bestSeller", bestSeller);
+      formData.append("sizes", JSON.stringify(sizes));
+
+      if (image1) formData.append("image1", image1);
+      if (image2) formData.append("image2", image2);
+      if (image3) formData.append("image3", image3);
+      if (image4) formData.append("image4", image4);
+
+      const response = await axios.post(
+        `${backendUrl}/api/products/add`,
+        formData,
+        { headers: { Authorization: `${token}` } }
+      );
+
+      if (response.status == 200) {
+        toast.success(response.data.message);
+        setName("");
+        setBestSeller("");
+        setCategory("");
+        setSubCategory("");
+        setDescription("");
+        setPrice("");
+        setSizes("");
+        setImage1(false);
+        setImage2(false);
+        setImage3(false);
+        setImage4(false);
+      } else {
+        toast.error(response.data.message);
+      }
     } catch (error) {
-      console.log("err", error);
+      toast.error(error.message);
     }
   };
   return (

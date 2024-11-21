@@ -42,7 +42,6 @@ const addProduct = async (req, res) => {
       image: imagesUrl,
       date: Date.now(),
     };
-    console.log(productData);
 
     const product = new productModel(productData);
 
