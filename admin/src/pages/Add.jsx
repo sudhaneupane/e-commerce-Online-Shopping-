@@ -287,10 +287,10 @@ const Add = () => {
 
       <div className="flex gap-2 mt-2">
         <input
-          onChange={() => setBestSeller((prev) => !prev)}
-          checked={bestSeller}
           type="checkbox"
           id="bestSeller"
+          onChange={(e) => setBestSeller(e.target.checked)}
+          checked={bestSeller}
         />
         <label className="cursor-pointer" htmlFor="bestSeller">
           BestSeller
