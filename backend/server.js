@@ -20,8 +20,10 @@ app.get("/", (req, res) => {
 
 import userRouter from "./routers/userRoute.js";
 import productRouter from "./routers/productRoute.js";
+import cartRouter from "./routers/cartRoute.js";
 
 app.use("/api/user", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/cart", cartRouter);
 
 app.listen(port, () => console.log(`Server started on ${port}`));
