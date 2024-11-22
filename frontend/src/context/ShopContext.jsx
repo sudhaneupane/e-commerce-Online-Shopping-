@@ -14,6 +14,7 @@ const ShopContextProvider = (props) => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState("");
+  let accessToken = localStorage.getItem("token");
 
   const addToCart = async (itemId, size) => {
     if (!size) {
@@ -32,6 +33,24 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+
+    if (token) {
+      try {
+        const response=await axios.post(
+          `${backendURL}/api/cart/add`,
+          { itemId, size },
+          {
+            headers: { Authorization: `${accessToken}` },
+          }
+        );
+        if(response.status==200){
+          toast.success(response.data.message)
+        }
+      } catch (error) {
+        console.log(error);
+        toast.error(error.message);
+      }
+    }
   };
 
   const getCartCount = () => {
@@ -52,6 +71,42 @@ const ShopContextProvider = (props) => {
     let cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
     setCartItems(cartData);
+    if (token) {
+      try {
+        await axios.patch(
+          `${backendURL}/api/cart/update`,
+          { itemId, size, quantity },
+          { headers: { Authorization: `${accessToken}` } }
+        );
+      } catch (error) {
+        console.log(error);
+        toast.error(error.message);
+      }
+    }
+  };
+
+  const getUserCart = async () => {
+    const token1 = localStorage.getItem("token");
+
+    try {
+      const response = await axios.get(
+        `${backendURL}/api/cart/get`,
+        {
+          headers: {
+            Authorization: `${token1}`,
+            "Content-Type": "application/json",
+          },
+        },
+        {}
+      );
+
+      if (response.status == 200) {
+        setCartItems(response.data.cartData);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
   };
 
   const getCartAmount = () => {
@@ -90,6 +145,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     if (!token && localStorage.getItem("token")) {
       setToken(localStorage.getItem("token"));
+      getUserCart(localStorage.getItem("token"));
     }
   });
 
