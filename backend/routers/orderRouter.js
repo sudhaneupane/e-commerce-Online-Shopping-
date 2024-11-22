@@ -11,10 +11,10 @@ import authUser from "../middleware/userAuth.js";
 
 const orderRouter = express.Router();
 
-orderRouter.post("/list", adminAuth, allOrdersAdmin);
+orderRouter.get("/list", adminAuth, allOrdersAdmin);
 orderRouter.post("/status", adminAuth, updateOrderStatus);
 
 orderRouter.post("/place", authUser, placeOrder);
-orderRouter.post("/userorders", authUser, userOrders);
+orderRouter.get("/userorders", authUser, userOrders);
 
 export default orderRouter;

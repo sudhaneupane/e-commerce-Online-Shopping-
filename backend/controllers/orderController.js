@@ -22,9 +22,38 @@ const placeOrder = async (req, res) => {
   }
 };
 
-const allOrdersAdmin = async (req, res) => {};
+const allOrdersAdmin = async (req, res) => {
+  try {
+    const orders = await orderModel.find({});
+    res.json({ success: true, orders });
+  } catch (error) {
+    console.log(error);
 
-const userOrders = async (req, res) => {};
-const updateOrderStatus = async (req, res) => {};
+    res.json({ success: false, message: error.message });
+  }
+};
+
+const userOrders = async (req, res) => {
+  try {
+    const { userId } = req.body;
+
+    const orders = await orderModel.find({ userId });
+
+    res.json({ success: true, orders });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
+const updateOrderStatus = async (req, res) => {
+  try {
+    const { orderId, status } = req.body;
+    const order = await orderModel.findByIdAndUpdate(orderId, { status });
+    res.json({ success: true, message: "Status Updated" });
+  } catch (error) {
+    console.log(error);
+    
+    res.json({ success: false, message: error.message });
+  }
+};
 
 export { placeOrder, allOrdersAdmin, userOrders, updateOrderStatus };
