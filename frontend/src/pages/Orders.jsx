@@ -8,8 +8,7 @@ const Orders = () => {
 
   const [orderData, setOrderData] = useState([]);
   let accessToken = localStorage.getItem("token");
-  console.log(accessToken);
-  
+
   const loadOrderData = async () => {
     try {
       if (!accessToken) {
