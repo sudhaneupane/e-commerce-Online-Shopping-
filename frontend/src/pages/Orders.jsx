@@ -4,13 +4,14 @@ import Title from "../components/Title";
 
 const Orders = () => {
   const { currency, products } = useContext(ShopContext);
+
   return (
     <div className="border-t pt-16">
       <div className="text-2xl">
         <Title text1={"My"} text2={"orders"} />
       </div>
       <div>
-        {products.slice(1, 4).map((item, index) => (
+        {products.map((item, index) => (
           <div
             key={index}
             className="py-4 border-t border-b text-gray-700 flex flex-col md:flex-row md:items-center md:justify-between gap-4"

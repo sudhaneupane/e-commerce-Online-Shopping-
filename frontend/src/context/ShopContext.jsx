@@ -36,15 +36,15 @@ const ShopContextProvider = (props) => {
 
     if (token) {
       try {
-        const response=await axios.post(
+        const response = await axios.post(
           `${backendURL}/api/cart/add`,
           { itemId, size },
           {
             headers: { Authorization: `${accessToken}` },
           }
         );
-        if(response.status==200){
-          toast.success(response.data.message)
+        if (response.status == 200) {
+          toast.success(response.data.message);
         }
       } catch (error) {
         console.log(error);
@@ -159,6 +159,7 @@ const ShopContextProvider = (props) => {
     setShowSearch,
     cartItems,
     addToCart,
+    setCartItems,
     getCartCount,
     updateQuantity,
     getCartAmount,
