@@ -5,7 +5,7 @@ import ProductItem from "../components/ProductItem";
 import { assets } from "../assets/assets";
 
 const Collection = () => {
-  const { products,search,showSearch } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
 
@@ -29,8 +29,10 @@ const Collection = () => {
   const applyFilter = () => {
     let productsCopy = products.slice();
 
-    if(showSearch && search){
-      productsCopy=productsCopy.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()))
+    if (showSearch && search) {
+      productsCopy = productsCopy.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      );
     }
 
     if (category.length > 0) {
@@ -64,7 +66,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory,search,showSearch,products]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProduct();
@@ -125,7 +127,7 @@ const Collection = () => {
           </div>
 
           {/* subcategory */}
-          <div
+          {/* <div
             className={`border border-gray-300 pl-5 py-3 my-5 ${
               showFilter ? "" : "hidden"
             } sm:block`}
@@ -136,7 +138,7 @@ const Collection = () => {
                 <input
                   className="w-3"
                   type="checkbox"
-                  value="TopWear"
+                  value="Dresses"
                   onChange={toggleSubCategory}
                 />
                 TopWear
@@ -178,7 +180,7 @@ const Collection = () => {
                 Dresses
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* main content */}

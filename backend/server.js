@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectdb from "./config/mongodb.js";
 import connectCloudinary from "./config/cloudinary.js";
+import morgan from "morgan";
 
 // app config
 const app = express();
@@ -13,6 +14,7 @@ connectCloudinary();
 // middlewares
 app.use(express.json());
 app.use(cors());
+app.use(morgan("combined"));
 
 // endpoint
 app.get("/", (req, res) => {
