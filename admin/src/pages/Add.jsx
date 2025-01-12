@@ -47,8 +47,8 @@ const Add = () => {
         toast.success(response.data.message);
         setName("");
         setBestSeller("");
-        setCategory("");
-        setSubCategory("");
+        setCategory("Men");
+        setSubCategory("Topwear");
         setDescription("");
         setPrice("");
         setSizes("");
@@ -178,6 +178,7 @@ const Add = () => {
             <option value="Dress">Dress</option>
             <option value="Winterwear">Winterwear</option>
             <option value="Summerwear">Summerwear</option>
+            <option value="Footwear">Footwear</option>
           </select>
         </div>
         <div>
